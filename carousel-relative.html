@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS CAROUSEL POSITION RELATIVE</title>
+    <style>
+        body{
+            background-color: #222;
+        }
+         #carousel .slides {
+             background-color: rgb(65, 65, 65);
+             width: 1300px;
+             margin:200px auto;
+             text-align: center;
+             padding: 40px;
+         }
+        #carousel .slides img{
+            width: 350px;
+            position: relative;
+        }
+      
+        #carousel .slides img:nth-child(3){
+            width: 450px;
+            z-index: 1;
+            box-shadow: 0 0 5px 3px #111;
+        }
+        #carousel .slides img:nth-child(2), img:nth-child(4){
+            bottom: 40px;
+            opacity: 0.5;
+            box-shadow: 0 0 3px 2px #111;}
+
+       
+        #carousel .slides img:nth-child(2){
+            left: 50px;
+        }
+        #carousel .slides img:nth-child(4){
+            right:50px;
+        }
+ 
+        #carousel .slides button{
+position: relative;
+top:-130px;
+font-size: 30px;
+        }
+        #carousel .slides button{
+position: relative;
+top:-130px;
+font-size: 30px;
+width: 40px;
+background-color: blanchedalmond;
+border-radius: 5px;
+        }
+        #carousel .slides button:hover{background-color: lightblue;}
+
+        #carousel img:nth-child(2):hover, img:nth-child(4):hover{
+            opacity:unset;
+            transition: 0.2s;  } 
+
+        #page{
+           text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 255px;}
+
+
+    </style>
+</head>
+<body>
+    
+<div id="carousel">
+    <div class="slides">
+        <button>&laquo</button>
+        <img src="https://cdn.wallpapersafari.com/8/14/n1fuYg.jpg" alt="">
+        <img src="https://images.wallpaperscraft.com/image/river_beautiful_summer_landscape_grass_84412_800x600.jpg" alt="">
+        <img src="https://cdn.wallpapersafari.com/81/8/h3jn6w.jpg" alt="">
+        <button>&raquo</button>
+      </div>
+      <div id="page">
+        <a href=""><img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/32/square-icon.png" alt=""></a>
+        <a href=""><img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/32/square-icon.png" alt=""></a>  
+        <a href=""><img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/32/square-icon.png" alt=""></a>
+    </div>
+</div>
+
+</body>
+</html>
